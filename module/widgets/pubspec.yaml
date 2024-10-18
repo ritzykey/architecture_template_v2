@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  responsive_framework: ^1.1.1
+  responsive_framework: ^1.5.1
 
 dev_dependencies:
   flutter_test:

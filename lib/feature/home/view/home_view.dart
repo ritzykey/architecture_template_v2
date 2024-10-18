@@ -3,6 +3,7 @@ import 'package:architecture_template_v2/feature/home/view/widget/home_app_bar.d
 import 'package:architecture_template_v2/feature/home/view/widget/home_user_list.dart';
 import 'package:architecture_template_v2/feature/home/view_model/home_view_model.dart';
 import 'package:architecture_template_v2/feature/home/view_model/state/home_state.dart';
+import 'package:architecture_template_v2/product/navigation/app_router.dart';
 import 'package:architecture_template_v2/product/state/base/base_state.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +25,11 @@ class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
       create: (context) => homeViewModel,
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.settings),
           onPressed: () async {
-            productViewModel.changeThemeMode(ThemeMode.dark);
+            //productViewModel.changeThemeMode(ThemeMode.dark);
             await homeViewModel.fetchUsers();
+            context.router.push(HomeDetailRoute(id: '5'));
           },
         ),
         appBar: const HomeAppBar(),

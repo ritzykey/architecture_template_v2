@@ -16,8 +16,11 @@ Future<void> main() async {
 }
 
 final class _MyApp extends StatelessWidget {
+  
   const _MyApp();
+
   static final _appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(

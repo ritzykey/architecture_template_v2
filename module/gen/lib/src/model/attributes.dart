@@ -6,10 +6,9 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'attributes.g.dart';
 
+/// This modal will use X api response
 @JsonSerializable()
 @immutable
-
-/// This modal will use X api response
 final class Attributes with EquatableMixin {
   /// It will be used to create a new instance of this class
   const Attributes({
